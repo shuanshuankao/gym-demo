@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 計算機</title>
+</head>
+
+<body>
+    <h1>BMI 計算機</h1>
+    <form action="">
+        <label for="name">Name&nbsp;&nbsp;&nbsp;:</label>
+        <input type="text" name="name" id="name" placeholder="請輸入真實姓名(全名)或暱稱">
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="age">
+        <select name="age" id="">
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="county">
+        <select name="county" id="">
+            <option value="台北市">台北市</option>
+            <option value="新北市">新北市</option>
+            <option value="基隆市">基隆市</option>
+        </select>
+        <br>
+        <label for="height">Height&nbsp;&nbsp;:</label>
+        <input type="number" name="height" id="height" placeholder="請輸入身高" step="0.1" strequired>
+        <br>
+        <label for="weight">Weight&nbsp;&nbsp;:</label>
+        <input type="number" name="weight" id="weight" placeholder="請輸入體重" step="0.1" required>
+        <br>
+
+
+
+        <label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <input type="text" name="email" id="email" placeholder="test@gmail.com">
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="file">
+
+        <p>請輸入想得到的體態建議&nbsp;:</p>
+        <textarea name="comment" id="comment" cols="50" rows="20"></textarea>
+        <br>
+        <button type="submit">送出</button>
+
+    </form>
+    <a href="index.html">返回首頁</a>
+</body>
+
+</html>
