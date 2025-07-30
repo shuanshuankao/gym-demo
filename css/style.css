@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background-color: blanchedalmond;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#form {
+    text-align: center;
+    background-color: rgb(241, 224, 128);
+    padding: 15px 50px;
+    margin: 30px auto;
+    width: 30%;
+}
+
+input {
+    text-align: center;
+}
+
+button {
+    background-color: darkgray;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+}
