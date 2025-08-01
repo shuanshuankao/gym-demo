@@ -60,7 +60,7 @@
         </select>
         <br>
         <label for="height">Height&nbsp;&nbsp;:</label>
-        <input type="number" name="height" id="height" placeholder="請輸入身高" step="0.1" strequired>
+        <input type="number" name="height" id="height" placeholder="請輸入身高" step="0.1" strequired >
         <br>
         <label for="weight">Weight&nbsp;&nbsp;:</label>
         <input type="number" name="weight" id="weight" placeholder="請輸入體重" step="0.1" required>
@@ -77,7 +77,7 @@
         <p>請輸入想得到的體態建議&nbsp;:</p>
         <textarea name="comment" id="comment" cols="50" rows="20"></textarea>
         <br>
-        <button type="submit">送出</button>
+        <button type="submit" onclick="calc()">計算</button>
         <script>
 
         </script>
@@ -86,17 +86,28 @@
     <a href="index.html">返回首頁</a>
 
     <script>
+        function calc() {
+            // 取得元件
+            const heightEl=document.querySelector("#height");
+            const weightEl=document.querySelector("#weight");
+            console.log(heightEl,weightEl);
+            
+            let height=heightEl.value;
+            let weight=weightEl.value;
+            console.log(height,weight)
+            // 外部輸入
+            // let height = Number(prompt("請輸入身高:"));
+            // let weight = Number(prompt("請輸入體重:"));
+            let bmi = getBMI(height, weight);
+            let p = getComment(bmi);
+            // let bmi = weight / (height / 100) ** 2;
+            // console.log(bmi);
+            document.write(`<h1>身高:${height}<br>體重:${weight}<br>BMI:${bmi.toFixed(2)}<br>${p}`);
+            document.write(`<h1 style="color:blue">${p}</h1>`)
+        }
 
 
-
-        let height = Number(prompt("請輸入身高:"));
-        let weight = Number(prompt("請輸入體重:"));
-        let bmi = getBMI(height, weight);
-        let p = getComment(bmi);
-        // let bmi = weight / (height / 100) ** 2;
-        // console.log(bmi);
-        document.write(`<h1>身高:${height}<br>體重:${weight}<br>BMI:${bmi.toFixed(2)}<br>${p}`);
-        document.write(`<h1 style="color:blue">${p}</h1>`);
+        
             // let x = 10;
         // let y = 20;
         // for (let i = 0; i < 0; i++) {
@@ -121,7 +132,7 @@
         //     }
 
         // let z = x + y;
-        console.log(x, y, z);
+        // console.log(x, y, z);
 
         // z = Number(x) + Number(y);
 
@@ -130,7 +141,7 @@
 
         // document.write("<h1><br>", x, y, z);
         // Math.round 四捨五入到個位數 toFixed 約束小數點 
-        document.write(`< br > <b> x=${x} y=${y} x${op}y=${z.toFixed(2)}</b>`);
+        // document.write(`< br > <b> x=${x} y=${y} x${op}y=${z.toFixed(2)}</b>`);
 
             // alert(`x = ${ x } y = ${ y } x + y=${ z }`);
         
