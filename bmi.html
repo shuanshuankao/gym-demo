@@ -29,6 +29,8 @@
 
         }
     </style>
+
+    <script src="js/tools.js"></script>
 </head>
 
 <body>
@@ -76,9 +78,65 @@
         <textarea name="comment" id="comment" cols="50" rows="20"></textarea>
         <br>
         <button type="submit">送出</button>
+        <script>
+
+        </script>
 
     </form>
     <a href="index.html">返回首頁</a>
+
+    <script>
+
+
+
+        let height = Number(prompt("請輸入身高:"));
+        let weight = Number(prompt("請輸入體重:"));
+        let bmi = getBMI(height, weight);
+        let p = getComment(bmi);
+        // let bmi = weight / (height / 100) ** 2;
+        // console.log(bmi);
+        document.write(`<h1>身高:${height}<br>體重:${weight}<br>BMI:${bmi.toFixed(2)}<br>${p}`);
+        document.write(`<h1 style="color:blue">${p}</h1>`);
+            // let x = 10;
+        // let y = 20;
+        // for (let i = 0; i < 0; i++) {
+        //     // 提示第幾次輸入
+        //     alert(`目前第幾${i + 1}次輸入`);
+        //     let x = Number(prompt("請輸入第一個數字:"));
+        //     let y = Number(prompt("請輸入第二個數字:"));
+        //     let op = prompt("請輸入(+-*/)=>(q:exit)");
+        //     if (op == "q") break;
+
+        //     let z;
+        //     if (op == "+") {
+        //         z = x + y;
+        //     } else if (op == "-") {
+        //         z = x - y;
+        //     } else if (op == "*") {
+        //         z = x * y;
+        //     } else if (op == "/") {
+        //         z = x / y;
+        //     } else {
+        //         alert("輸入錯誤!");
+        //     }
+
+        // let z = x + y;
+        console.log(x, y, z);
+
+        // z = Number(x) + Number(y);
+
+        // 三個輸出
+        // console.log(typeof (x), typeof (y), typeof (z));
+
+        // document.write("<h1><br>", x, y, z);
+        // Math.round 四捨五入到個位數 toFixed 約束小數點 
+        document.write(`< br > <b> x=${x} y=${y} x${op}y=${z.toFixed(2)}</b>`);
+
+            // alert(`x = ${ x } y = ${ y } x + y=${ z }`);
+        
+
+        // 三個輸入
+    </script>
 </body>
 
 </html>
